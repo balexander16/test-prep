@@ -1,10 +1,10 @@
-package edu.cnm.deepdive;
+package edu.cnm.deepdive.init;
 
 public class ClassC {
 
   private static double staticData = getTrickyData();
-
   private double instanceData = getTrickyData();
+
 
   private static double getTrickyData() {
     System.out.println("ClassC::getTrickyData");
@@ -33,5 +33,13 @@ public class ClassC {
 
   public void setInstanceData(double instanceData) {
     this.instanceData = instanceData;
+  }
+
+  public void doSomething() {
+    System.out.println("ClassC::doSomething");
+  }
+
+  public static void doSomethingElse() {
+    System.out.println("ClassC::doSomethingElse");
   }
 }

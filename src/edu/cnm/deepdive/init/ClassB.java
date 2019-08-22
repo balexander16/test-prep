@@ -1,4 +1,4 @@
-package edu.cnm.deepdive;
+package edu.cnm.deepdive.init;
 
 public class ClassB extends ClassA {
 
@@ -19,14 +19,12 @@ public class ClassB extends ClassA {
   public static void main(String[] args) {
     System.out.println("ClassB::main");
     ClassC c1 = new ClassC();
-    ClassC c2 = new ClassC();
-    c1.setInstanceData(Double.MAX_VALUE);
-    c1.setStaticData(Double.MIN_VALUE);
-    System.out.printf("%s.%s = %f%n", "c1", "instanceData", c1.getInstanceData());
-    System.out.printf("%s.%s = %f%n", "c1", "staticData", c1.getStaticData());
-    System.out.printf("%s.%s = %f%n", "c2", "instanceData", c2.getInstanceData());
-    System.out.printf("%s.%s = %f%n", "c2", "staticData", c2.getStaticData());
-
+    ClassC c2 = new ClassD();
+    ClassD d1 = new ClassD();
+    c1.setInstanceData(10);
+    c1 = d1;
+    d1.setInstanceData(20);
+    System.out.println(c1.getInstanceData());
   }
 
 }
